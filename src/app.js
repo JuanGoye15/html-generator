@@ -22,3 +22,5 @@ const myWebsite = () => {
   element += domain[Math.floor(Math.random() * domain.length)] + " ";
   document.getElementById("website").innerHTML = element;
 };
+
+console.log(myWebsite)

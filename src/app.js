@@ -7,20 +7,23 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  myWebsite();
+  let pronouns = ["the", "our"];
+  let adjs = ["great", "big"];
+  let nouns = ["jogger", "racoon"];
+  let domains = [".com", ".net", ".us", ".io"];
+  let websiteName = [];
+
+  for (let pronoun of pronouns) {
+    for (let adj of adjs) {
+      for (let noun of nouns) {
+        for (let domain of domains) {
+          websiteName.push(pronoun + adj + noun + domain);
+        }
+      }
+    }
+  }
+
+  for (let index in websiteName) {
+    console.log(websiteName[index]);
+  }
 };
-
-const myWebsite = () => {
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let domain = [".com", ".net", ".us", ".io"];
-
-  let element = pronoun[Math.floor(Math.random() * pronoun.length)];
-  element += adj[Math.floor(Math.random() * adj.length)];
-  element += noun[Math.floor(Math.random() * noun.length)];
-  element += domain[Math.floor(Math.random() * domain.length)] + " ";
-  document.getElementById("website").innerHTML = element;
-};
-
-console.log(myWebsite)
